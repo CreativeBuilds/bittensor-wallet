@@ -1,0 +1,20 @@
+@import "../colors" ;
+
+select {
+    width: 90%;
+    border: 1px solid $outline-color;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background: #f3f3f3;
+    margin: 1em 0 1em 0em;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    // small caps
+    font-variant: small-caps;
+}
+button.add-account {
+    width: 90%;
+    font-size: 1em;
+}

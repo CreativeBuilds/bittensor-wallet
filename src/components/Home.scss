@@ -1,0 +1,64 @@
+@import "../colors";
+
+h1#balance {
+    font-size: min(5em, 10vw);
+    display: flex;
+    margin-bottom: 20px;
+    opacity: 0;
+
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+
+    span {
+        width: 0.33em;
+        height: 0.33em;
+    }
+}
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: min(20ch, 100vw);
+    max-width: 95vw;
+
+    .address {
+
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out 0.75s forwards;
+
+        &>h3 {
+            margin: 0;
+        }
+        &>p {
+            margin-top: 0;
+            font-size: 0.8em;
+            word-break: break-all;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+        &:active,&:focus {
+            border: 1px solid $highlight-color;
+            border-radius: 5px;
+        }
+    }
+    button {
+        font-size: 1em;
+    }
+}
+
+.actions {
+    width: 100%;
+    opacity: 0;
+
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}

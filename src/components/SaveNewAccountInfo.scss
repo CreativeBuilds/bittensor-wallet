@@ -1,0 +1,50 @@
+@import "../colors";
+
+h1 {
+    margin: 0;
+    text-align:center;
+}
+
+.mnemonic {
+    width: 95%;
+    border: 1px solid $outline-color;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: auto;
+
+    // word wrap
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+        display: inline-block;
+        margin: 0.5em;
+        padding: 0.5em;
+        border-radius: 5px;
+        background: $outline-color;
+        color: #f3f3f3;
+    }
+}
+
+input {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid $outline-color;
+    background: #f3f3f3;
+    font-weight: bold;
+    border-radius: 5px;
+
+    &:focus,&:active {
+        border-color: $highlight-color !important;
+        outline-color: $highlight-color !important;
+        color: $highlight-color !important;
+    }
+}

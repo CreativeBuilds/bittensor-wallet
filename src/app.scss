@@ -1,0 +1,122 @@
+@import "./colors";
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    background: linear-gradient(135deg, #f3f3f3, #b6beca66);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+}
+
+button {
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+    border: 1px solid $outline-color;
+    color: $outline-color;
+    background: #f3f3f3;
+    font-weight: bold;
+    cursor: pointer;
+
+    
+
+    &:focus {
+        outline: none;
+        color:#f3f3f3;
+        background-color: $highlight-color;
+        border-color: $highlight-color;
+    }
+    &:active {
+        color:#f3f3f3;
+        background-color: darken($highlight-color, 10%);
+        border-color: darken($highlight-color, 10%);
+    }
+
+    &:disabled {
+        color: #b6beca !important;
+        border-color: #b6beca !important;
+        background-color: #f3f3f3 !important;
+    }
+}
+
+#logo {
+    opacity: 0;
+    $width: 5em;
+    position: absolute;
+
+    width: $width;
+    height: $width;
+
+    top: calc(50% - $width/2);
+    left: calc(50% - $width/2);
+
+    // animate fadeInUp
+    animation: fadeInUp 3s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        25%,66% {
+            opacity: 1;
+            transform: translateY(0);
+            top: calc(50% - $width/2);
+            left: calc(50% - $width/2);
+            width: $width;
+            height: $width;
+        }
+        100% {
+            top: calc($width/4);
+            left: calc($width/4);
+            opacity: 1;
+            margin: 0;
+            width: calc($width/2);
+            height: calc($width/2);
+        }
+    }
+}
+
+#header {
+    height: 5em;
+    width: 100%;
+    & > span {
+        width: 1em;
+    }
+}
+
+#content {
+    opacity: 0;
+    margin-bottom: 5em;
+    // fade in after 3s
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3.3s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

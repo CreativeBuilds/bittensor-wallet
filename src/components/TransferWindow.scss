@@ -1,0 +1,44 @@
+@import "../colors";
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    input {
+        width: 100%;
+    }
+
+    .inline {
+        position: absolute;
+        font-size: 0.75em;
+        padding: 0.1em 0.2em;
+        border-radius: 5px;
+        right: 0;
+        bottom: 1.6em;
+        width: unset;
+    }
+}
+
+.transfer-window {
+    width: 100%;
+
+    hr {
+        width: inherit;
+    }
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.error {
+    margin: 0;
+    color: $error-color;
+    &:nth-of-type(2) {
+        margin-top: 0.5em;
+    }
+}

@@ -1,0 +1,1 @@
+export const STARTED_AT = Date.now();

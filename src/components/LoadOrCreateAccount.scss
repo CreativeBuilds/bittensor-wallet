@@ -1,0 +1,48 @@
+@import "../colors" ;
+
+
+
+div.hr {
+    margin: 0.5em 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 1px;
+    border-radius:5px;
+    background: linear-gradient(90deg, #f3f3f3, $color-bg 15%,darken($color-bg, 50%) 85%, #f3f3f300 90%);
+    &:nth-of-type(2) {
+    background: linear-gradient(270deg, #f3f3f3, $color-bg 15%,darken($color-bg, 50%) 85%, #f3f3f300 90%);
+    }
+}
+
+textarea {
+    position:relative;
+    
+    resize: none;
+    height: 4em;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    font-size: 1.25em;
+    margin-bottom: 0 !important;
+    // set to capital
+    text-transform: uppercase;
+}
+
+#logo {
+    enable-background: new 0 0 1440 1440;
+    width: 50px;
+    margin-bottom: 3em;
+
+    path {
+        stroke: #000;
+        stroke-width: 2.6747;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+    }
+}

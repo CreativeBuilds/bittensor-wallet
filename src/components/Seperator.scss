@@ -1,0 +1,18 @@
+@import "../colors";
+
+.seperator {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1em 0;
+
+    span {
+        color: darken($color-bg, 50%);
+    }
+
+    & > div {
+        display: inline-flex;
+        flex: 1;
+        text-align: center;
+    }
+}
